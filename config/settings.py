@@ -82,22 +82,22 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
+'''DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
-}
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': db_info['name'],
-#         'USER':db_info['username'],
-#         'PASSWORD':db_info['password'],
-#         'HOST':db_info['host'],
-#         'PORT':'5432'
-#     },
-# }
+}'''
+ DATABASES = {
+    'default' : {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'onlineshop_project1',
+        'USER': 'root',
+        'PASSWORD': '111111',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+   },
+ }
 
 # DATABASE_ROUTERS = [
 #     'config.master_slave_router.MasterSlaveRouter',
